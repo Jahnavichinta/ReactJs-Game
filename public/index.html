@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #cdd4d8; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    
+        .title {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #f1f5f5;
+            text-align: center;
+        }
+    
+        .board {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #2b2733;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+        }
+    
+        .board-row {
+            display: flex;
+        }
+    
+        .square {
+            width: 80px;
+            height: 80px;
+            margin: 5px;
+            font-size: 24px;
+            cursor: pointer;
+            background-color: #FFFFFF; 
+            border: 2px solid #122936; 
+            border-radius: 10px;
+            transition: background-color 0.3s, transform 0.2s;
+            color: #122936;
+        }
+    
+        .square:hover {
+            background-color: #cdd4d8; 
+            transform: scale(1.05);
+        }
+    
+        .square:focus {
+            outline: none;
+        }
+    
+        .square::after {
+            content: attr(data-player);
+            color: #0288D1; 
+            font-size: 24px;
+            line-height: 80px;
+            display: inline-block;
+            transition: color 0.3s;
+        }
+    
+        .status {
+            margin: 10px 0;
+            font-size: 20px;
+            color: #e8f1f0;
+        }
+    
+        .reset-button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #89a1ae; 
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            color: black;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+    
+        .reset-button:hover {
+            background-color: #4a779a;
+            color: white; 
+            transform: scale(1.05);
+        }
+       
+.next-game-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #89a1ae; 
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    color: black;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.next-game-button:hover {
+    background-color: #4a779a; 
+    transform: scale(1.05);
+    color: white;
+}
+
+    </style>
+    
+</head>
+<body>
+    <div id="root"></div>
+    <script src="../src/index.js" type="module"></script>
+</body>
+</html>
